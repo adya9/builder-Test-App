@@ -1,0 +1,102 @@
+{
+  "root": "contact-form",
+  "elements": {
+    "contact-form": {
+      "type": "Card",
+      "props": {
+        "title": "Contact Us",
+        "description": "Please fill out the form below to get in touch."
+      },
+      "children": [
+        "form"
+      ]
+    },
+    "form": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": 16
+      },
+      "children": [
+        "name-input",
+        "email-input",
+        "message-input",
+        "submit-button"
+      ]
+    },
+    "name-input": {
+      "type": "Input",
+      "props": {
+        "placeholder": "Your Name",
+        "type": "text"
+      },
+      "on": {
+        "change": {
+          "action": "setState",
+          "params": {
+            "statePath": "/form/name",
+            "value": {
+              "$state": "/elements/name-input/props/value"
+            }
+          }
+        }
+      },
+      "children": []
+    },
+    "email-input": {
+      "type": "Input",
+      "props": {
+        "placeholder": "Your Email",
+        "type": "email"
+      },
+      "on": {
+        "change": {
+          "action": "setState",
+          "params": {
+            "statePath": "/form/email",
+            "value": {
+              "$state": "/elements/email-input/props/value"
+            }
+          }
+        }
+      },
+      "children": []
+    },
+    "message-input": {
+      "type": "Input",
+      "props": {
+        "placeholder": "Your Message",
+        "type": "text"
+      },
+      "on": {
+        "change": {
+          "action": "setState",
+          "params": {
+            "statePath": "/form/message",
+            "value": {
+              "$state": "/elements/message-input/props/value"
+            }
+          }
+        }
+      },
+      "children": []
+    },
+    "submit-button": {
+      "type": "Button",
+      "props": {
+        "label": "Submit",
+        "variant": "default"
+      },
+      "on": {
+        "press": {
+          "action": "setState",
+          "params": {
+            "statePath": "/form/submit",
+            "value": true
+          }
+        }
+      },
+      "children": []
+    }
+  }
+}
