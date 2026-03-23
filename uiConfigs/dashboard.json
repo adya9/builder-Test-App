@@ -1,0 +1,125 @@
+{
+  "root": "dashboard",
+  "elements": {
+    "dashboard": {
+      "type": "Card",
+      "props": {
+        "title": "Dashboard",
+        "variant": "outlined"
+      },
+      "children": [
+        "stats-section",
+        "recent-activity",
+        "user-profile"
+      ]
+    },
+    "stats-section": {
+      "type": "Card",
+      "props": {
+        "title": "Statistics",
+        "variant": "default"
+      },
+      "children": [
+        "metric-1",
+        "metric-2"
+      ]
+    },
+    "metric-1": {
+      "type": "CardContent",
+      "props": {},
+      "children": [
+        "Text - Metric 1 Value: 100"
+      ]
+    },
+    "metric-2": {
+      "type": "CardContent",
+      "props": {},
+      "children": [
+        "Text - Metric 2 Value: 200"
+      ]
+    },
+    "recent-activity": {
+      "type": "Card",
+      "props": {
+        "title": "Recent Activity",
+        "variant": "default"
+      },
+      "children": [
+        "activity-item-1",
+        "activity-item-2"
+      ]
+    },
+    "activity-item-1": {
+      "type": "CardContent",
+      "props": {},
+      "children": [
+        "Text - Activity 1"
+      ]
+    },
+    "activity-item-2": {
+      "type": "CardContent",
+      "props": {},
+      "children": [
+        "Text - Activity 2"
+      ]
+    },
+    "user-profile": {
+      "type": "Card",
+      "props": {
+        "title": "User Profile",
+        "variant": "default"
+      },
+      "children": [
+        "user-info",
+        "user-actions"
+      ]
+    },
+    "user-info": {
+      "type": "CardContent",
+      "props": {},
+      "children": [
+        "Text - User Name: John Doe"
+      ]
+    },
+    "user-actions": {
+      "type": "CardFooter",
+      "props": {},
+      "children": [
+        "edit-button",
+        "logout-button"
+      ]
+    },
+    "edit-button": {
+      "type": "Button",
+      "props": {
+        "label": "Edit Profile",
+        "variant": "default"
+      },
+      "on": {
+        "press": {
+          "action": "setState",
+          "params": {
+            "statePath": "/editMode",
+            "value": true
+          }
+        }
+      }
+    },
+    "logout-button": {
+      "type": "Button",
+      "props": {
+        "label": "Logout",
+        "variant": "destructive"
+      },
+      "on": {
+        "press": {
+          "action": "setState",
+          "params": {
+            "statePath": "/userAuthenticated",
+            "value": false
+          }
+        }
+      }
+    }
+  }
+}
