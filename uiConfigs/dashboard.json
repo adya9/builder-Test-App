@@ -2,7 +2,7 @@
   "root": "dashboard",
   "elements": {
     "dashboard": {
-      "type": "Card",
+      "type": "Card1",
       "props": {
         "title": "Dashboard",
         "variant": "outlined"

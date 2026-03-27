@@ -1,0 +1,62 @@
+{
+  "triggerType": "httpTrigger",
+  "name": "sample",
+  "version": 1,
+  "data": {
+    "nodes": [
+      {
+        "id": "trigger_1",
+        "position": {
+          "x": -110.5,
+          "y": 0.5
+        },
+        "type": "httpTrigger",
+        "data": {
+          "method": "POST",
+          "label": "sample",
+          "authentication": "bearer",
+          "headers": {
+            "X-Tenant-ID": "test"
+          }
+        },
+        "sourcePosition": "right",
+        "measured": {
+          "width": 182,
+          "height": 105
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "http_request_1774586923925_0iz9oa",
+        "position": {
+          "x": 155.8125,
+          "y": 163
+        },
+        "type": "httpRequest",
+        "data": {
+          "url": "",
+          "method": "GET",
+          "header": {
+            "X-Tenant-ID": "test",
+            "Authorization": "{{Webhook.headers.authorization}}"
+          },
+          "payload": ""
+        },
+        "measured": {
+          "width": 242,
+          "height": 84
+        },
+        "selected": true,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "source": "trigger_1",
+        "target": "http_request_1774586923925_0iz9oa",
+        "id": "xy_edge__trigger_1_http_request_1774586923925_0iz9oa"
+      }
+    ]
+  }
+}
